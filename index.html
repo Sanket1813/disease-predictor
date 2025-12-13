@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disease Prediction System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🩺 Disease Prediction System</h1>
+    <p>Select symptoms and click Predict</p>
+
+    <input type="text" id="search" placeholder="Search symptom..." onkeyup="filterSymptoms()">
+
+    <div id="symptomList" class="checkbox-list"></div>
+
+    <button onclick="predict()">Predict Disease</button>
+
+    <div id="output"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
