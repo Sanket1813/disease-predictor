@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Disease Prediction System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
 <div class="container">
-    <h1>🩺 Disease Prediction System</h1>
-    <p>Select symptoms and click Predict</p>
+    <h1>🩺 Disease Prediction</h1>
+    <p class="subtitle">AI-based symptom analysis</p>
 
-    <input type="text" id="search" placeholder="Search symptom..." onkeyup="filterSymptoms()">
+    <input type="text" id="search" placeholder="🔍 Search symptoms..." onkeyup="filterSymptoms()">
 
     <div id="symptomList" class="checkbox-list"></div>
 
@@ -20,6 +21,6 @@
     <div id="output"></div>
 </div>
 
-<script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 </html>
