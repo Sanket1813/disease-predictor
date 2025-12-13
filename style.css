@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    width: 420px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+h1, p {
+    text-align: center;
+}
+
+#search {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.checkbox-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.checkbox-item input {
+    margin-right: 10px;
+}
+
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5a67d8;
+}
+
+.result-card {
+    background: #f7f7f7;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border-left: 5px solid #667eea;
+}
