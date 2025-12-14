@@ -1,125 +1,147 @@
 * {
     box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    min-height: 100vh;
     margin: 0;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
+/* Full screen layout */
 .container {
-    background: #ffffff;
+    background: white;
     width: 100%;
-    max-width: 460px;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
+    padding: 25px;
+    border-radius: 0;
 }
 
+/* Headings */
 h1 {
     text-align: center;
-    margin-bottom: 5px;
-    color: #2c3e50;
 }
 
 .subtitle {
     text-align: center;
+    color: #555;
     font-size: 14px;
-    color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
+.dashboard-title {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Search */
 #search {
     width: 100%;
     padding: 12px;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px solid #ccc;
-    font-size: 14px;
     margin-bottom: 10px;
 }
 
+/* Symptom list */
 .checkbox-list {
-    max-height: 230px;
+    max-height: 260px;
     overflow-y: auto;
-    border-radius: 10px;
     border: 1px solid #ddd;
-    padding: 10px;
-    background: #fafafa;
+    padding: 12px;
+    border-radius: 10px;
 }
 
 .checkbox-item {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
-    padding: 6px;
-    border-radius: 6px;
-    transition: background 0.2s;
-}
-
-.checkbox-item:hover {
-    background: #eef2ff;
-}
-
-.checkbox-item input {
-    margin-right: 10px;
-    transform: scale(1.1);
-}
-
-.checkbox-item label {
+    gap: 10px;
     font-size: 14px;
-    color: #333;
+    margin-bottom: 6px;
 }
 
+/* Selected symptoms */
+.selected-box {
+    margin-top: 15px;
+}
+
+.selected-box h3 {
+    margin-bottom: 8px;
+}
+
+.selected-symptoms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.symptom-chip {
+    background: #667eea;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Button */
 button {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 14px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #667eea, #5a67d8);
     color: white;
     border: none;
     border-radius: 12px;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 17px;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(102,126,234,0.4);
+    opacity: 0.95;
 }
 
-#output {
+/* Results */
+#output h3 {
+    text-align: center;
     margin-top: 20px;
 }
 
-#output h3 {
-    text-align: center;
-    color: #2c3e50;
-}
-
 .result-card {
-    background: #f4f6ff;
-    padding: 12px;
+    background: #f7f8ff;
+    padding: 14px;
     margin-top: 10px;
-    border-radius: 10px;
     border-left: 5px solid #667eea;
-    font-size: 14px;
+    border-radius: 10px;
 }
 
-/* 📱 Mobile optimization */
-@media (max-width: 480px) {
-    .container {
-        padding: 15px;
-    }
+/* Power BI */
+.powerbi-container {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
 
-    h1 {
-        font-size: 22px;
+.powerbi-container iframe {
+    width: 100%;
+    height: 520px;
+    border: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+    font-size: 13px;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+    .powerbi-container iframe {
+        height: 320px;
     }
 }

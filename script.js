@@ -66,3 +66,52 @@ function predict() {
     })
     .catch(() => alert("API connection failed"));
 }
+
+
+// Show selected symptoms live
+function updateSelectedSymptoms() {
+    const selectedBox = document.getElementById("selectedSymptoms");
+    if (!selectedBox) return;
+
+    selectedBox.innerHTML = "";
+
+    const checked = document.querySelectorAll("input[type='checkbox']:checked");
+
+    checked.forEach(c => {
+        const chip = document.createElement("span");
+        chip.className = "symptom-chip";
+        chip.innerText = c.value;
+        selectedBox.appendChild(chip);
+    });
+}
+
+// Detect checkbox changes (event delegation)
+document.addEventListener("change", function (e) {
+    if (e.target.type === "checkbox") {
+        updateSelectedSymptoms();
+    }
+});
+
+// Add loading animation to button
+const originalPredict = predict;
+predict = function () {
+
+    const btn = document.querySelector("button");
+    const originalText = btn.innerHTML;
+
+    btn.innerHTML = "⏳ Predicting...";
+    btn.disabled = true;
+
+    originalPredict();
+
+    // restore button after API response
+    setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+
+        // smooth scroll to result
+        document.getElementById("output")
+            .scrollIntoView({ behavior: "smooth" });
+
+    }, 1200);
+};

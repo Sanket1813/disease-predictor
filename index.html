@@ -9,18 +9,51 @@
 <body>
 
 <div class="container">
-    <h1>🩺 Disease Prediction</h1>
-    <p class="subtitle">AI-based symptom analysis</p>
+    <h1>🩺 Disease Prediction System</h1>
+    <p class="subtitle">
+        AI-powered disease prediction using symptoms & analytics
+    </p>
 
-    <input type="text" id="search" placeholder="🔍 Search symptoms..." onkeyup="filterSymptoms()">
+    <!-- Search -->
+    <input 
+        type="text" 
+        id="search" 
+        placeholder="🔍 Search symptom..." 
+        onkeyup="filterSymptoms()"
+    >
 
+    <!-- Symptoms -->
     <div id="symptomList" class="checkbox-list"></div>
 
-    <button onclick="predict()">Predict Disease</button>
+    <div class="selected-box">
+    <h3>✅ Selected Symptoms</h3>
+    <div id="selectedSymptoms" class="selected-symptoms"></div>
+    </div>
 
+
+    <!-- Predict -->
+    <button onclick="predict()">🔮 Predict Disease</button>
+
+    <!-- Output -->
     <div id="output"></div>
+
+    <!-- Power BI -->
+    <h2 class="dashboard-title">📊 Disease Analytics Dashboard</h2>
+
+    <div class="powerbi-container">
+        <iframe 
+            title="Disease Analytics"
+            src="https://app.powerbi.com/view?r=eyJrIjoiYzAzOWE0YTUtNTUyMC00YjM3LWE1MjQtODhiNzFlMmMzNTQxIiwidCI6IjhkOGNmNDM4LWI0OWQtNDRkMS04OTk0LTU1MjNkZjdjZTY1OSJ9"
+            frameborder="0"
+            allowFullScreen="true">
+        </iframe>
+    </div>
+
+    <footer>
+        © 2025 Disease Prediction System | ML + Power BI @Sanket Pachupate
+    </footer>
 </div>
 
-</body>
 <script src="script.js"></script>
+</body>
 </html>
